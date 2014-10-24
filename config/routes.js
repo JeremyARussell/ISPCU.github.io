@@ -59,12 +59,24 @@ module.exports.routes = {
      * Routes for the other pages
      * */
 
-
-    '/volunteers': {
+    '/about': {
+        view: 'aboutpage'
+    },
+    '/organization': {
+      view: 'organizationpage'
+    },
+    '/volunteer': {
        view: 'volunteerpage'
     },
-    '/signup': {
-       view: 'signuppage'
+    '/members': {
+       view: 'memberspage'
     }
-
+    /****
+    * '/signup': {
+    *   view: 'signuppage'
+    *},
+    *'/account': {
+    *   view: 'accountpage'
+    *}
+	*/
 };
