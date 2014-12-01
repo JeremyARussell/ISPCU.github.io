@@ -64,7 +64,10 @@ module.exports.routes = {
        view: 'volunteerpage'
     },
     '/login_register': {
-       view: 'login_registerpage'
+        view: 'login_registerpage'
+    },
+    '/profile': {
+        view: 'profile'
     }
 
 };

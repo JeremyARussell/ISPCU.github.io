@@ -2,51 +2,39 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var MemberSchema = new Schema({
-    name: { type: String, default: '', trim: true },
-    email: { type: String, default: '', trim: true },//(they'll check a box on if they want general newsletters as well)
-    ISP: { type: String, default: '', trim: true },  //which I think means I need to add a boolean for this model
-    address: { type: String, default: '', trim: true },
-    phoneNumber: { type: String, default: '', trim: true },
-    want: { type: String, default: '', trim: true }//We need to probably have something that works with option/dropdowns
-                                                   //more appropriately. like an enum or something
-                                                   /* -Reliability
-                                                    *  -Customer Service
-                                                    *  -Price
-                                                    *  -Speed
-                                                    * */
+    firstName: { type: String, default: '', trim: true },   //
+    lastName: { type: String, default: '', trim: true },    //
+    password: { type: String, default: '', trim: true },    //
+    confPassword: { type: String, default: '', trim: true },     //
+    email: { type: String, default: '', trim: true }
+
 
 });
 
 MemberSchema
-    .path('name')
+    .path('firstName')
     .validate(function(value) {
         if(value)return value.length > 0;
     }, 'Member name cannot be blank');
 MemberSchema
-    .path('email')
+    .path('lastName')
     .validate(function(value) {
         if(value)return value.length > 0;
     }, 'Member email cannot be blank');
 MemberSchema
-    .path('ISP')
+    .path('password')
     .validate(function(value) {
         if(value)return value.length > 0;
     }, 'Member ISP cannot be blank');
 MemberSchema
-    .path('address')
+    .path('confPassword')
     .validate(function(value) {
         if(value)return value.length > 0;
     }, 'Member address cannot be blank');
 MemberSchema
-    .path('phoneNumber')
+    .path('email')
     .validate(function(value) {
         if(value)return value.length > 0;
     }, 'Member phone number cannot be blank');
-MemberSchema
-    .path('want')
-    .validate(function(value) {
-        if(value)return value.length > 0;
-    }, 'Member want cannot be blank');
-
 
 mongoose.model('Member', MemberSchema);

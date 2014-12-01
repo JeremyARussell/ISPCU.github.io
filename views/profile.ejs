@@ -1,0 +1,45 @@
+<div class="page-micro--large band--white">
+   <div class="wrapper">
+      <div style="border: solid 1px #ccc;">
+        <div class="layout__item palm-one-whole lap-and-up-one-whole box--blue">
+          <h3 class="heading page-micro--small" style="margin-bottom:0px;">Profile</h3>
+        </div>
+
+         <div class="layout--center layout--middle layout--flush">
+            <div class="layout__item palm-one-whole lap-and-up-one-whole box--blue hide-lap-and-up" style="display:none;">
+                  <h3 class="heading" style="margin-bottom:0px;">Register</h3>
+               </div><div class="layout__item palm-one-whole lap-and-up-three-fifths box--tint" style=" border-left: solid 1px #ccc;padding: 20px 20px 0px;">
+
+               <form class="layout" ng-controller="MemberController">
+                  <div class="layout__item palm-one-whole lap-and-up-one-half">
+                     <label for="firstname">First Name
+                     <input type="text" name="firstName" ng-model="member.firstName" >
+                     </label>
+                  </div><div class="layout__item palm-one-whole lap-and-up-one-half">
+                     <label for="lastname">Last Name
+                     <input type="text" name="lastName" ng-model="member.lastName">
+                     </label>
+                  </div>
+                  <div class="layout__item palm-one-whole lap-and-up-one-half">
+                     <label for="password">Password
+                     <input type="password" name="password" ng-model="member.password">
+                     </label>
+                  </div><div class="layout__item palm-one-whole lap-and-up-one-half">
+                     <label for="confirm_password">Confirm Password
+                     <input type="password" name="confPassword" ng-model="member.confPassword">
+                     </label>
+                  </div>
+                  <div class="layout__item palm-one-whole lap-and-up-one-whole">
+                     <label for="email">Email
+                     <input type="email" name="email" ng-model="member.email">
+                     </label>
+                  </div>
+                  <div class="layout--center page-micro--small">
+                      <div class="layout__item palm-one-whole lap-and-up-one-whole text-center"><button class="btn btn--small btn--success" ng-click="memberFunc(member)">Save</button></div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

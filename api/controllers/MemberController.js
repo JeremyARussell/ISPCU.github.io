@@ -4,8 +4,8 @@ var db = require('../services/db.js'),
 module.exports = {
     post: function (req, res) {
         console.log(req.body);//For debugging
-        Member.create({name: req.body.name,       email: req.body.email,             ISP: req.body.ISP,
-                       address: req.body.address, phoneNumber: req.body.phoneNumber, want: req.body.want
+        Member.create({firstName: req.body.firstName,       lastName: req.body.lastName,             password: req.body.password,
+                       confPassword: req.body.confPassword, email: req.body.email
         }, function(err, tm) {
             if (err) res.send(500, err);
 

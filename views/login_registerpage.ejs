@@ -36,11 +36,11 @@
                <form class="layout" ng-controller="MemberController">
                   <div class="layout__item palm-one-whole lap-and-up-one-half">
                      <label for="firstname">First Name
-                     <input type="text" name="firstname" ng-model="member.firstname" >
+                     <input type="text" name="firstName" ng-model="member.firstName" >
                      </label>
                   </div><div class="layout__item palm-one-whole lap-and-up-one-half">
                      <label for="lastname">Last Name
-                     <input type="text" name="lastname" ng-model="member.lastname">
+                     <input type="text" name="lastName" ng-model="member.lastName">
                      </label>
                   </div>
                   <div class="layout__item palm-one-whole lap-and-up-one-half">
@@ -49,7 +49,7 @@
                      </label>
                   </div><div class="layout__item palm-one-whole lap-and-up-one-half">
                      <label for="confirm_password">Confirm Password
-                     <input type="password" name="confirm_password" ng-model="member.confirm_password">
+                     <input type="password" name="confPassword" ng-model="member.confPassword">
                      </label>
                   </div>
                   <div class="layout__item palm-one-whole lap-and-up-one-whole">
@@ -57,7 +57,7 @@
                      <input type="email" name="email" ng-model="member.email">
                      </label>
                   </div>
-                  <div class="layout__item palm-one-whole lap-and-up-two-fifths">
+                  <!--<div class="layout__item palm-one-whole lap-and-up-two-fifths">
                      <label for="address">Address <small><i style="margin:3px;text-transform:none;font-weight:normal;">optional</i></small>
                      <input type="text" name="address" ng-model="member.address">
                      </label>
@@ -131,7 +131,7 @@
                      <label for="phone">Phone <small><i style="margin:3px;text-transform:none;font-weight:normal;">optional</i></small>
                      <input type="tel" name="phone" ng-model="member.phoneNumber">
                      </label>
-                  </div>
+                  </div>-->
                   <div class="layout--center page-micro--small">
                      <div class="layout__item palm-one-whole lap-and-up-one-whole text-center"><button class="btn btn--small btn--success" ng-click="memberFunc(member)">Enroll</button></div>
                   </div>

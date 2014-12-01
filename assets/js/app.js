@@ -2,7 +2,8 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('ISPCU', [
-  'ngRoute',
+angular
+    .module('ISPCU', [
+    'ngRoute',
     'ISPCU.controllers'
-]);
+    ]);
